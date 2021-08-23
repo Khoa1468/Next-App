@@ -23,7 +23,7 @@ export default function NavBar(): JSX.Element {
   const classes = useStyles();
 
   return (
-    <div className="makeStyles-root-4">
+    <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -32,12 +32,9 @@ export default function NavBar(): JSX.Element {
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon />
+            <MenuIcon className={classes.menuButton} />
           </IconButton>
-          <Typography
-            variant="h6"
-            className="MuiTypography-root makeStyles-title-57 MuiTypography-h6"
-          >
+          <Typography variant="h6" className={classes.title}>
             React App
           </Typography>
           <Link href="/about" passHref>
