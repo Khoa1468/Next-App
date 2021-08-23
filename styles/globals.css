@@ -6,8 +6,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.main {
+  text-align: center;
+}
+
 a {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
 }
 
