@@ -4,23 +4,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6::selection {
+p::selection {
   background: #5efcff
 }
 
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6::-moz-selection {
+p::-moz-selection {
   background: #5efcff
 }
 
