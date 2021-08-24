@@ -14,6 +14,16 @@ h6::selection {
   background: #5efcff
 }
 
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6::-moz-selection {
+  background: #5efcff
+}
+
 .todo {
   display: flexbox;
   justify-content: center;
