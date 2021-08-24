@@ -71,13 +71,18 @@ export default function NavBar() {
             onClose={handleClose}
           >
             <Link href="/" passHref>
-              <a href="/">
+              <a href="/" className="a">
                 <MenuItem onClick={handleClose}>Home</MenuItem>
               </a>
             </Link>
             <Link href="/about" passHref>
-              <a href="/about">
+              <a href="/about" className="a">
                 <MenuItem onClick={handleClose}>About</MenuItem>
+              </a>
+            </Link>
+            <Link href="/todos" passHref>
+              <a href="/todos" className="a">
+                <MenuItem onClick={handleClose}>Todos</MenuItem>
               </a>
             </Link>
           </Menu>

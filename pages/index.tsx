@@ -9,7 +9,7 @@ export default function Home(): JSX.Element {
   }
 
   return (
-    <Template headingTitle="Next App" className="main" wrappedElement="main">
+    <Template headingTitle="Next App" className="home" wrappedElement="main">
       <h1>Hello, World!</h1>
 
       <h1>Home Page</h1>
