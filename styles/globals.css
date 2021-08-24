@@ -5,11 +5,13 @@ body {
 }
 
 ::selection {
-  background: #5efcff
+  background: #5efcff;
+  color: black;
 }
 
 ::-moz-selection {
-  background: #5efcff
+  background: #5efcff;
+  color: black;
 }
 
 .todo {
