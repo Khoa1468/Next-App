@@ -17,6 +17,7 @@ export default function Home(): JSX.Element {
       <h1>{count}</h1>
 
       <button onClick={handleClick}>Click Me</button>
+      <p>Hover Me</p>
     </Template>
   );
 }
