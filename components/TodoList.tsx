@@ -1,4 +1,4 @@
-import Template from "layouts/Template";
+import Component from "layouts/Component";
 import Todo from "./Todo";
 import { todoInterface } from "pages/todos";
 
@@ -9,10 +9,10 @@ interface TodoListProps {
 
 export default function TodoList({ todos = [], checkBtn }: TodoListProps) {
   return (
-    <Template headingTitle="Todo" wrappedElement="fragment">
+    <Component wrappedElement="fragment">
       {todos.map((value) => {
         return <Todo key={value.id} checkBtn={checkBtn} todo={value} />;
       })}
-    </Template>
+    </Component>
   );
 }

@@ -1,4 +1,4 @@
-import Template from "layouts/Template";
+import Component from "layouts/Component";
 import Button from "@atlaskit/button";
 import styled, { css } from "styled-components";
 import CheckIcon from "@atlaskit/icon/glyph/check";
@@ -33,7 +33,7 @@ export default function Todo(props: {
   checkBtn: (id: string | number) => void;
 }) {
   return (
-    <Template headingTitle="Todo" wrappedElement="fragment">
+    <Component wrappedElement="fragment">
       <ButtonStyled
         isComplete={props.todo.isComplete}
         isDisabled={props.todo.isComplete}
@@ -51,6 +51,6 @@ export default function Todo(props: {
       >
         {props.todo.title}
       </ButtonStyled>
-    </Template>
+    </Component>
   );
 }

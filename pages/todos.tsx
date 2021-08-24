@@ -52,7 +52,7 @@ export default function Todos() {
   }, []);
   return (
     <Template headingTitle="Todo" className="todo" wrappedElement="main">
-      <h3>Đây Là TodoList</h3>
+      <h2>TodoList</h2>
       <br />
       <Textfield
         name="add-todo"
