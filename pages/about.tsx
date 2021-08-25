@@ -10,7 +10,7 @@ export default function About(): JSX.Element {
         <div className="link">
           <Link href="https://github.com/Khoa1468/" passHref>
             {/* <a href="https://github.com/Khoa1468/">Me</a> */}
-            {process.env.AUTHOR_WEBSITE}
+            Me
           </Link>
         </div>
       </h1>
