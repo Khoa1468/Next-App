@@ -1,8 +1,9 @@
-require("dotenv").config();
+// require("dotenv");
 import Template from "layouts/Template";
 import Link from "next/link";
 
 export default function About(): JSX.Element {
+  // const env = process.env.AUTHOR_WEBSITE;
   return (
     <Template className="main" headingTitle="About">
       <h1>
@@ -10,7 +11,7 @@ export default function About(): JSX.Element {
         <div className="link">
           <Link href="https://github.com/Khoa1468/" passHref>
             {/* <a href="https://github.com/Khoa1468/">Me</a> */}
-            {process.env.AUTHOR_WEBSITE}
+            <span>{process.env.AUTHOR_WEBSITE}</span>
           </Link>
         </div>
       </h1>
