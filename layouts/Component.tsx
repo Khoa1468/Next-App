@@ -1,10 +1,10 @@
 import React from "react";
 
-interface ComponentProps {
+type ComponentProps = {
   children?: React.ReactNode;
   className?: string;
   wrappedElement?: "div" | "main" | "fragment";
-}
+};
 
 export default function Component({
   children = null,

@@ -1,5 +1,6 @@
 import Template from "layouts/Template";
 import { useState, Component } from "react";
+import { Button } from "@material-ui/core";
 
 export default function Home(): JSX.Element {
   const [count, setCount] = useState<number>(0);
@@ -16,7 +17,9 @@ export default function Home(): JSX.Element {
 
       <h1>{count}</h1>
 
-      <button onClick={handleClick}>Click Me</button>
+      <Button variant="outlined" onClick={handleClick} color="primary">
+        Click Me
+      </Button>
       <p>Hover Me</p>
     </Template>
   );

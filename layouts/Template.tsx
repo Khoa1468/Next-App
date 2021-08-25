@@ -1,12 +1,12 @@
 import Heading from "../components/Head";
 import React from "react";
 
-interface TemplateProps {
+type TemplateProps = {
   headingTitle?: string;
   children?: React.ReactNode;
   className?: string;
   wrappedElement?: "div" | "main" | "fragment";
-}
+};
 
 export default function Template({
   headingTitle = "",

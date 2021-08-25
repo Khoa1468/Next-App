@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       flexGrow: 1,
+      cursor: "pointer",
     },
   })
 );
@@ -71,24 +72,26 @@ export default function NavBar() {
             onClose={handleClose}
           >
             <Link href="/" passHref>
-              <a href="/" className="a">
+              <a href="/" className="a black">
                 <MenuItem onClick={handleClose}>Home</MenuItem>
               </a>
             </Link>
             <Link href="/about" passHref>
-              <a href="/about" className="a">
+              <a href="/about" className="a black">
                 <MenuItem onClick={handleClose}>About</MenuItem>
               </a>
             </Link>
             <Link href="/todos" passHref>
-              <a href="/todos" className="a">
+              <a href="/todos" className="a black">
                 <MenuItem onClick={handleClose}>Todos</MenuItem>
               </a>
             </Link>
           </Menu>
-          <Typography variant="h6" className={classes.title}>
-            Next App
-          </Typography>
+          <Link href="/">
+            <Typography variant="h6" className={classes.title}>
+              Next App
+            </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
