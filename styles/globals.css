@@ -5,12 +5,14 @@ body {
 }
 
 ::selection {
-  background: #5efcff;
+  /* background: #5efcff; */
+  background: #eff547;
   color: black;
 }
 
 ::-moz-selection {
-  background: #5efcff;
+  /* background: #5efcff; */
+  background: #eff547;
   color: black;
 }
 
