@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       flexGrow: 1,
       cursor: "pointer",
+      display: "flex-box",
     },
   })
 );
@@ -86,11 +87,18 @@ export default function NavBar() {
                 <MenuItem onClick={handleClose}>Todos</MenuItem>
               </a>
             </Link>
+            <Link href="/j4f" passHref>
+              <a href="/j4f" className="a black">
+                <MenuItem onClick={handleClose}>J4F</MenuItem>
+              </a>
+            </Link>
           </Menu>
-          <Link href="/">
-            <Typography variant="h6" className={classes.title}>
-              Next App
-            </Typography>
+          <Link href="/" passHref>
+            <a href="/" className="a white">
+              <Typography variant="h6" className={classes.title}>
+                Next App
+              </Typography>
+            </a>
           </Link>
         </Toolbar>
       </AppBar>
