@@ -6,12 +6,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import Switch from "@material-ui/core/Switch";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormGroup from "@material-ui/core/FormGroup";
-import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
+import LinkComponent, { AppBarLinkPropsBeta } from "components/AppBar-Link";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -40,6 +36,34 @@ export default function NavBar() {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const className = "a black";
+
+  const LinkProps: AppBarLinkPropsBeta = {
+    handleClose,
+    detail: [
+      {
+        href: "/",
+        className,
+        text: "Home",
+      },
+      {
+        href: "/about",
+        className,
+        text: "About",
+      },
+      {
+        href: "/todos",
+        className,
+        text: "Todos",
+      },
+      {
+        href: "/j4f",
+        className,
+        text: "J4F",
+      },
+    ],
   };
 
   return (
@@ -72,26 +96,10 @@ export default function NavBar() {
             open={open}
             onClose={handleClose}
           >
-            <Link href="/" passHref>
-              <a href="/" className="a black">
-                <MenuItem onClick={handleClose}>Home</MenuItem>
-              </a>
-            </Link>
-            <Link href="/about" passHref>
-              <a href="/about" className="a black">
-                <MenuItem onClick={handleClose}>About</MenuItem>
-              </a>
-            </Link>
-            <Link href="/todos" passHref>
-              <a href="/todos" className="a black">
-                <MenuItem onClick={handleClose}>Todos</MenuItem>
-              </a>
-            </Link>
-            <Link href="/j4f" passHref>
-              <a href="/j4f" className="a black">
-                <MenuItem onClick={handleClose}>J4F</MenuItem>
-              </a>
-            </Link>
+            <LinkComponent
+              handleClose={handleClose}
+              detail={LinkProps.detail}
+            />
           </Menu>
           <Link href="/" passHref>
             <a href="/" className="a white">

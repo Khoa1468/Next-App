@@ -17,15 +17,17 @@ export default function Home(): JSX.Element {
   const [count, setCount] = useState<number>(0);
   const classes = useStyles();
 
-  // function handleClick() {
-  //   setCount(count + 1);
-  // }
-
   useEffect(() => {
     const storage = localStorage.getItem(COUNT_LOCAL_STORAGE_KEY);
     if (storage) {
       const count = JSON.parse(storage);
-      const countValidated = Number.parseInt(count);
+      let countValidated = Number(count);
+
+      if (countValidated === NaN) {
+        countValidated = 0;
+        setCount(countValidated);
+      }
+
       setCount(countValidated);
     } else {
       setCount(0);
