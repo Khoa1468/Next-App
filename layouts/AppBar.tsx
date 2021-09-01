@@ -1,13 +1,15 @@
 import Link from "next/link";
 import React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Menu,
+} from "@material-ui/core";
+import LinkComponent, { DetailProps } from "components/AppBar-Link";
 import MenuIcon from "@material-ui/icons/Menu";
-import Menu from "@material-ui/core/Menu";
-import LinkComponent, { AppBarLinkPropsBeta } from "components/AppBar-Link";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,6 +27,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+/**
+ * This Is NavBar Component
+ * @returns ```JSX.Element```
+ */
+
 export default function NavBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -40,31 +47,28 @@ export default function NavBar() {
 
   const className = "a black";
 
-  const LinkProps: AppBarLinkPropsBeta = {
-    handleClose,
-    detail: [
-      {
-        href: "/",
-        className,
-        text: "Home",
-      },
-      {
-        href: "/about",
-        className,
-        text: "About",
-      },
-      {
-        href: "/todos",
-        className,
-        text: "Todos",
-      },
-      {
-        href: "/j4f",
-        className,
-        text: "J4F",
-      },
-    ],
-  };
+  const detailLink: Array<DetailProps> = [
+    {
+      href: "/",
+      className,
+      text: "Home",
+    },
+    {
+      href: "/about",
+      className,
+      text: "About",
+    },
+    {
+      href: "/todos",
+      className,
+      text: "Todos",
+    },
+    {
+      href: "/j4f",
+      className,
+      text: "J4F",
+    },
+  ];
 
   return (
     <div className={classes.root}>
@@ -96,10 +100,7 @@ export default function NavBar() {
             open={open}
             onClose={handleClose}
           >
-            <LinkComponent
-              handleClose={handleClose}
-              detail={LinkProps.detail}
-            />
+            <LinkComponent handleClose={handleClose} detail={detailLink} />
           </Menu>
           <Link href="/" passHref>
             <a href="/" className="a white">

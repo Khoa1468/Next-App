@@ -3,18 +3,32 @@ import Link from "next/link";
 import MenuItem from "@material-ui/core/MenuItem";
 import React from "react";
 
-interface DetailProps {
+/**
+ * This Interface Is A Child Interface Of ```AppBarLinkProps``` Interface
+ */
+
+export interface DetailProps {
   href: string;
   className: string;
   text: string;
 }
 
-export interface AppBarLinkPropsBeta {
+/**
+ * This Interface Is A Interface Of ```AppBarLinkProps``` Function Element
+ */
+
+export interface AppBarLinkProps {
   handleClose: () => any;
   detail: Array<DetailProps>;
 }
 
-export default function LinkComponent(props: AppBarLinkPropsBeta) {
+/**
+ *
+ * @param props Is Props Of LinkComponent
+ * @returns JSX.Element
+ */
+
+export default function LinkComponent(props: AppBarLinkProps) {
   return (
     <Component wrappedElement="fragment">
       {props.detail.map((value) => {
